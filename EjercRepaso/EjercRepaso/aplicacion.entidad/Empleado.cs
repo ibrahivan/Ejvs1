@@ -10,7 +10,7 @@ namespace EjercRepaso.aplicacion.entidad
     {
         //Atributos
         string nombre, apellido, dNI, titulacion;
-        int dia, mes, anyo,nSS, nCuenta, nEmpleado;
+        int dia, mes, anyo,nSS, nCuenta, nEmpleado, id;
 
         //Constructor vacio
         public Empleado()
@@ -18,7 +18,7 @@ namespace EjercRepaso.aplicacion.entidad
         }
 
         //Constructor
-        public Empleado(string nombre, string apellido, string dNI, string titulacion, int dia, int mes, int anyo, int nSS, int nCuenta, int nEmpleado)
+        public Empleado(string nombre, string apellido, string dNI, string titulacion, int dia, int mes, int anyo, int nSS, int nCuenta, int nEmpleado, int id)
         {
             this.nombre = nombre;
             this.apellido = apellido;
@@ -30,6 +30,7 @@ namespace EjercRepaso.aplicacion.entidad
             this.nSS = nSS;
             this.nCuenta = nCuenta;
             this.nEmpleado = nEmpleado;
+            this.Id = id;
         }
 
         //Getters y setters
@@ -44,11 +45,6 @@ namespace EjercRepaso.aplicacion.entidad
         public int NSS { get => nSS; set => nSS = value; }
         public int NCuenta { get => nCuenta; set => nCuenta = value; }
         public int NEmpleado { get => nEmpleado; set => nEmpleado = value; }
-
-        
-
-
-        
-
+        public int Id { get => id; set => id = value; }
     }
 }

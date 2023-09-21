@@ -13,9 +13,9 @@ namespace EjercRepaso
         static void Main(string[] args)
         {
             //instanciamos las diferentes clases para poder hacer uso de los metodos
-            ImplEmpleado intP = new ImplEmpleado();
+            ImplEmpleado intE = new ImplEmpleado();
             ImplMenu intM = new ImplMenu();
-            List<Empleado> listP = new List<Empleado>();
+            List<Empleado> listE = new List<Empleado>();
             int opcion;
             do
             {
@@ -34,17 +34,17 @@ namespace EjercRepaso
 
                     case 1:
 
-                        Console.WriteLine("\n\t\t----Mostrar informacion----");
-                        listP = intP.mostrarInfo(listP); //nos devuelve una lista actualizada
+                        Console.WriteLine("\n\t\t----Registro empleado----");
+                        listE = intE.registroEmpleado(listE); //nos devuelve una lista actualizada
                         break;
                     case 2:
-                        Console.WriteLine("\n\t\t----Entrada género----");
-                        listP = intP.entradaGenero(listP); //nos devuelve una lista actualizada
+                        Console.WriteLine("\n\t\t----Modificar empleado----");
+                        listE = intE.modificarEmpleado(listE); //nos devuelve una lista actualizada
                         break;
 
                     case 3:
-                        Console.WriteLine("\n\t\t----Salida género----");
-                        listP = intP.salidaGenero(listP); //nos devuelve una lista actualizada
+                        Console.WriteLine("\n\t\t----Exportar a fichero----");
+                        listE = intE.exportarFich(listE); //nos devuelve una lista actualizada
                         break;
 
 
