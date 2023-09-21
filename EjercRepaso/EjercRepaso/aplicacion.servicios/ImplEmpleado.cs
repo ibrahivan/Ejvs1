@@ -135,7 +135,7 @@ namespace EjercRepaso.aplicacion.servicios
         }
 
 
-        public List<Empleado> exportarFich(List<Empleado> listE)
+        public void exportarFich(List<Empleado> listE)
         {
             int opcion = CapturaEntero("Desea exportar un empleado (Opción 1) o todos los empleados (Opción 2)", 1, 2);
            
@@ -181,7 +181,7 @@ namespace EjercRepaso.aplicacion.servicios
                 }
                 
             
-            return listE;
+            
         }
 
 

@@ -44,7 +44,7 @@ namespace EjercRepaso
 
                     case 3:
                         Console.WriteLine("\n\t\t----Exportar a fichero----");
-                        listE = intE.exportarFich(listE); //nos devuelve una lista actualizada
+                        intE.exportarFich(listE); //nos devuelve una lista actualizada
                         break;
 
 

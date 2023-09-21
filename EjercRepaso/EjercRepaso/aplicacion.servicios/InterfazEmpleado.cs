@@ -16,7 +16,7 @@ namespace EjercRepaso.aplicacion.servicios
         List<Empleado> modificarEmpleado(List<Empleado> listE);
 
         //metodo que exporta los datos a un fichero
-        List<Empleado> exportarFich(List<Empleado> listE);
+        void exportarFich(List<Empleado> listE);
 
     }
 }
