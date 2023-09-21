@@ -152,7 +152,7 @@ namespace EjercRepaso.aplicacion.servicios
                         {
                             if (id == listE[j].Id)
                              {
-                                 StreamWriter sw = File.CreateText(@"C:\\zDatosPruebas\\empleados.txt");
+                                StreamWriter sw = File.CreateText(@"C:\\zDatosPruebas\\empleados.txt");
                                 sw.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  || DNI  || Fecha nacimiento  || Titulacion ");
                                 sw.WriteLine("\n\t\t      {0} {1} v{2} {3} {4}/{5}/{6} {7}", listE[j].Id, listE[j].Nombre, listE[j].Apellido, listE[j].DNI, listE[j].Dia, listE[j].Mes, listE[j].Anyo, listE[j].Titulacion);
                                 sw.Close();
