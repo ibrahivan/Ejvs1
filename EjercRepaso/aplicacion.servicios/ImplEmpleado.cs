@@ -153,8 +153,8 @@ namespace EjercRepaso.aplicacion.servicios
                             if (id == listE[j].Id)
                              {
                                 StreamWriter sw = File.CreateText(@"C:\\zDatosPruebas\\empleados.txt");
-                                sw.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  || DNI  || Fecha nacimiento  || Titulacion ");
-                                sw.WriteLine("\n\t\t      {0} {1} v{2} {3} {4}/{5}/{6} {7}", listE[j].Id, listE[j].Nombre, listE[j].Apellido, listE[j].DNI, listE[j].Dia, listE[j].Mes, listE[j].Anyo, listE[j].Titulacion);
+                                sw.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  ||    DNI    || Fecha nacimiento  || Titulacion ");
+                                sw.WriteLine("\n\t\t      {0} {1,12} {2,13} {3,12} {4,9}/{5}/{6} {7,19} ", listE[j].Id, listE[j].Nombre, listE[j].Apellido, listE[j].DNI, listE[j].Dia, listE[j].Mes, listE[j].Anyo, listE[j].Titulacion);
                                 sw.Close();
                                 Console.WriteLine("\tEmpleado " + listE[j].Nombre + " exportado correctamente.");
                                 existe = true;
@@ -168,10 +168,10 @@ namespace EjercRepaso.aplicacion.servicios
                     break;
                     case 2:
                         StreamWriter sw1 = File.CreateText(@"C:\\zDatosPruebas\\empleados.txt");
-                        sw1.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  || DNI  || Fecha nacimiento  || Titulacion ");
+                        sw1.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  ||    DNI    || Fecha nacimiento  || Titulacion ");
                         for (int k = 0; k < listE.Count; k++)
                         {
-                            sw1.WriteLine("\n\t\t      {0} {1} {2} {3} {4}/{5}/{6} {7}", listE[k].Id, listE[k].Nombre, listE[k].Apellido, listE[k].DNI, listE[k].Dia, listE[k].Mes, listE[k].Anyo, listE[k].Titulacion);
+                            sw1.WriteLine("\n\t\t      {0} {1,12} {2,13} {3,12} {4,9}/{5}/{6} {7,19} ", listE[k].Id, listE[k].Nombre, listE[k].Apellido, listE[k].DNI, listE[k].Dia, listE[k].Mes, listE[k].Anyo, listE[k].Titulacion);
                         }
                         sw1.Close();
                         Console.WriteLine("Todos los empleados exportados correctamente.");
@@ -261,10 +261,10 @@ namespace EjercRepaso.aplicacion.servicios
 
         public void mostrarEmpleados(List<Empleado>listE)
         {
-            Console.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  || DNI  || Fecha nacimiento  || Titulacion  ||  Nº Seg Social  || Nº Cuenta  ");
+            Console.WriteLine("\n\t\t Id empleado || Nombre  ||  Apellidos  ||    DNI    || Fecha nacimiento  || Titulacion  ||  Nº Seg Social  || Nº Cuenta  ");
             for (int i = 0; i < listE.Count; i++)
             {
-                Console.WriteLine("\n\t\t      {0} {1} {2} {3} {4}/{5}/{6} {7} {8} {9}", listE[i].Id, listE[i].Nombre, listE[i].Apellido, listE[i].DNI, listE[i].Dia, listE[i].Mes, listE[i].Anyo, listE[i].Titulacion, listE[i].NSS, listE[i].NCuenta);
+                Console.WriteLine("\n\t\t      {0} {1,12} {2,13} {3,12} {4,9}/{5}/{6} {7,19} {8,15} {9,15}", listE[i].Id, listE[i].Nombre, listE[i].Apellido, listE[i].DNI, listE[i].Dia, listE[i].Mes, listE[i].Anyo, listE[i].Titulacion, listE[i].NSS, listE[i].NCuenta);
 
             }
         }
